@@ -32,6 +32,13 @@ const ticketRoutes = require('./routes/ticketRoutes');
 app.use('/api/auth', authRoutes);
 app.use('/api/tickets', ticketRoutes);
 
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Support Ticket System API is running',
+  });
+});
+
 // Test route
 app.get('/api/test', (req, res) => {
   res.json({ 

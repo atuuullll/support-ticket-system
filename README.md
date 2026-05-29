@@ -55,6 +55,41 @@ npm start
 
 The frontend runs locally in the browser, and the backend runs as the API server.
 
+## Deployment
+
+This project can be deployed using common hosting services such as Render, Railway, Vercel, Netlify, or similar platforms.
+
+Recommended setup:
+
+- Deploy the backend as a Node.js web service.
+- Deploy the frontend as a static React application.
+- Use a hosted MongoDB database.
+- Store all private values in the hosting provider's environment variable settings.
+
+### Backend Environment Variables
+
+```env
+PORT=your_port
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secure_secret
+NODE_ENV=production
+FRONTEND_URL=your_live_frontend_url
+```
+
+### Frontend Environment Variables
+
+```env
+REACT_APP_API_URL=your_live_backend_api_url
+```
+
+The frontend API URL should include the backend `/api` path.
+
+Example format:
+
+```text
+https://your-backend-domain.com/api
+```
+
 ## Environment Setup
 
 The backend requires an environment configuration file for local development.
